@@ -67,3 +67,11 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+const video = document.getElementById("bg-video");
+
+video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= 5) {
+        video.currentTime = 0;
+        video.play();
+    }
+});
