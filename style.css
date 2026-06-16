@@ -108,29 +108,30 @@ footer {
     border-top: 1px solid #00ff00;
 }
 
-#bg-video {
-    position: fixed;
+.hero {
+    position: relative;
+    height: 80vh;
+    /* hero section height */
+    overflow: hidden;
+}
+
+/* VIDEO ONLY INSIDE HERO */
+#hero-video {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-
-    z-index: -999;
-    /* 👈 forces it behind EVERYTHING */
-    pointer-events: none;
+    z-index: 0;
 }
 
-body {
-    margin: 0;
-    background: black;
-    overflow-x: hidden;
-}
-
-.page,
-header,
-section,
-footer {
+/* TEXT ON TOP */
+.hero-content {
     position: relative;
     z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 120px;
 }
